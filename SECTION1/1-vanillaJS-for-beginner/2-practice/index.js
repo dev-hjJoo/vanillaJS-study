@@ -46,4 +46,73 @@ contents.innerText = "It's color is changed by lavender!"
 // id를 쓰지 않고도 html 문서를 가지고 올 방법은 무궁무진!
 // 그 중에서도 nicolas가 많이 쓰는 방법! querySelector
 const title2 = document.querySelector("#title");
-console.log('It is using querySelector:', title2)
+console.log('It is using querySelector:', title2);
+
+// 그렇지만 JavaScript는 고작 html이나 css를 바꾸려고 만들어진 게 아니야!
+// JavaScript의 등장 이유? 이벤트에 반응하기 위해서!
+// 이벤트란? 웹 사이트에서 발생하는 것! we can intercept events!
+
+// 이벤트 받기를 기다리는 것 = EventListener
+// 첫 번째 인자는 타입으로, 어떤 기능을 수행할 건지에 대한 정보를 넣기!
+// 두 번째 인자로는 이벤트를 다룰 함수 넣기!
+// 웹페이지의 사이즈가 변경되면 자동으로 호출되는거야
+
+window.addEventListener("resize", handleResize);
+
+function handleResize(event) {
+    console.log(event);
+    alert('hey!');
+}
+
+// 바꿔야 할 값을 상수로 저장해두기
+const BASE_COLOR = "lavender"
+const OTHER_COLOR ="hotpink"
+
+// 현재 값에 따라 값 변경하기 (조건문 사용)
+function handleClick() {
+    const currentColor = contents.style.color;
+    console.log(currentColor)
+    if (currentColor === BASE_COLOR) {
+        contents.style.color = OTHER_COLOR;
+    } else {
+        contents.style.color = BASE_COLOR;
+    }
+}
+
+function change_orangeColor () {
+    contents.style.color = "orange"
+}
+
+function change_greenColor () {
+    contents.style.color = "green"
+}
+
+function init() {
+    contents.style.color = BASE_COLOR
+    // click = 클릭 이벤트
+    contents.addEventListener("click", handleClick);
+    // mouseenter = 마우스가 영역 안에 들어왔는지 확인하는 이벤트
+    contents.addEventListener("mouseenter", change_greenColor);
+    // mouseout = 마우스가 영역 밖으로 나갔는지 확인하는 이벤트
+    contents.addEventListener("mouseout", change_orangeColor);
+}
+init()
+
+function handleOffline() {
+    console.log("Bye..")
+}
+function handleOnline() {
+    console.log("Welcome back!")
+}
+
+// offline = 인터넷 연결이 끊겼는지 확인하는 이벤트
+window.addEventListener("offline", handleOffline);
+// online = 인터넷 연결이 연결되었는지 확인하는 이벤트
+window.addEventListener("online", handleOnline);
+
+
+
+// 이제껏 했던 방법들이 보통 사람들에게 추천하기 좋은 방법은 아님!
+// 자바스크립트 css를 가지고 처리하기 때문
+// html은 html에서만, css는 css에서만, js는 로직을 처리! 이렇게 각각의 역할을 각자 수행하게끔 해야 해!
+// 새로 파일을 만들자! 이름은 new!

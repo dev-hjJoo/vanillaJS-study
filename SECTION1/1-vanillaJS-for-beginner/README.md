@@ -22,7 +22,10 @@
 ### 2020년 8월 16일
 > #3. 'MAKE YOUR FIRST JS APP' PART(총 11개, 약 2시간) 완강
 * momentum 제작 프로젝트
-* 값 localStorage 저장하기
+* js에서 값 localStorage 저장하기
 * 클래스 개념 이용해서 요소 제어(클래스 추가 및 검색하기)
 * setInterval 메소드 이용하여 실시간 변화주기
 * event의 preventDefault 방식을 이용하여 값 날아가는 것을 막자!
+* Math 모듈을 이용하여 랜덤 값 얻기와 floor 함수 활용하기
+* 로컬에 저장되어 있는 이미지 웹 페이지에 넣기
+* 위도와 경도 불러와 localStorage에 추가!

@@ -14,7 +14,15 @@
 * Array와 Object (여러 개의 값을 저장하는 방법)
 ### 2020년 8월 15일
 > #2. 'PRACTICE' PART(총 8개, 약 1시간 10분) 완강
-* HTML 파일을 JS 파일에서 수정하기
+* CSS, HTML 파일을 JS 파일에서 수정하기
 * DOM function 중 innerHTML과 innerText 차이 참고 자료 [👻](https://jaeworld.github.io/2018-09-20/javascript_innertext_innerhtml)
+* Class를 변경하지 않고, 필요한 항목을 추가하는 방법!
+  * 변경 -> 추가/ 같은지 비교 -> 포함하고 있는지 여부 확인
+* toggle: 있는지 확인하고 없으면 추가!
 ### 2020년 8월 16일
 > #3. 'MAKE YOUR FIRST JS APP' PART(총 11개, 약 2시간) 완강
+* momentum 제작 프로젝트
+* 값 localStorage 저장하기
+* 클래스 개념 이용해서 요소 제어(클래스 추가 및 검색하기)
+* setInterval 메소드 이용하여 실시간 변화주기
+* event의 preventDefault 방식을 이용하여 값 날아가는 것을 막자!
